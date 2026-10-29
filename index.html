@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="Discover thoughtful quotes to inspire your day with QuoteSpace.">
+  <title>QuoteSpace — A Moment of Inspiration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="QuoteSpace home">
+      <span class="brand-mark">q.</span>
+      <span>QuoteSpace</span>
+    </a>
+    <span class="topbar-note">A little inspiration, every day.</span>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">YOUR DAILY PAUSE</p>
+      <h1>Words to <em>live by.</em></h1>
+      <p class="subtitle">A thoughtful collection of words to inspire your next step.</p>
+    </section>
+
+    <section class="quote-card" aria-live="polite">
+      <div class="card-top">
+        <span class="quote-label">TODAY'S THOUGHT</span>
+        <span id="quote-number">01 / 12</span>
+      </div>
+
+      <span class="quote-mark" aria-hidden="true">“</span>
+      <blockquote id="quote-text">The secret of getting ahead is getting started.</blockquote>
+      <p id="quote-author" class="author">— Mark Twain</p>
+
+      <div class="card-bottom">
+        <label class="category-control">
+          <span class="sr-only">Filter quotes by category</span>
+          <select id="category-select">
+            <option value="All">All categories</option>
+            <option value="Motivation">Motivation</option>
+            <option value="Growth">Personal growth</option>
+            <option value="Wisdom">Wisdom</option>
+            <option value="Creativity">Creativity</option>
+          </select>
+        </label>
+        <button id="favorite-button" class="icon-button" type="button" aria-label="Save quote to favorites" title="Save favorite">♡</button>
+        <button id="copy-button" class="icon-button" type="button" aria-label="Copy quote" title="Copy quote">▢</button>
+      </div>
+    </section>
+
+    <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+
+    <div class="actions">
+      <button id="new-quote-button" class="primary-button" type="button">
+        Discover another quote <span aria-hidden="true">↗</span>
+      </button>
+      <button id="share-button" class="secondary-button" type="button">Share quote</button>
+    </div>
+
+    <section class="favorites-section">
+      <div class="favorites-heading">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2>Saved favorites <span id="favorite-count">0</span></h2>
+        </div>
+        <button id="clear-favorites-button" class="text-button" type="button">Clear all</button>
+      </div>
+      <div id="favorites-list" class="favorites-list">
+        <p class="empty-state">Your favorite quotes will appear here. Tap ♡ to save one.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Made for a more thoughtful day.</span>
+    <span>QUOTESPACE © 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
